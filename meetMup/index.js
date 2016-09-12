@@ -19,11 +19,11 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(cors());
 app.use(express.static(path.join(__dirname, "./public")));
 
-app.use('/userbase', expressJWT({ secret: config.secret })
+app.use('/api', expressJWT({ secret: config.secret })
    .unless({
      path: [
-       { url: '/userbase/register', methods: ['POST'] },
-       { url: '/userbase/login',    methods: ['POST'] }
+       { url: '/api/register', methods: ['POST'] },
+       { url: '/api/login',    methods: ['POST'] }
      ]
    }));
 app.use(jwtErrorHandler);
@@ -36,6 +36,6 @@ function jwtErrorHandler (err, req, res, next) {
 }
 
 app.use("/", webRouter);
-app.use("/userbase", usersRouter);
+app.use("/api", usersRouter);
 
 app.listen(config.port, () => console.log(`Express started on port: ${config.port}`));
