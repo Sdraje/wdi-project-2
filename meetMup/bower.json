@@ -1,0 +1,21 @@
+{
+  "name": "droneshop",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sdraje <alfmarmil@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Sdraje/WDI_LDN_22_CLASSWORK",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "4.0"
+  }
+}
