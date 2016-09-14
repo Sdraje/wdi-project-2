@@ -9,7 +9,7 @@ const expressJWT = require('express-jwt');
 const app        = express();
 const config     = require("./config/config");
 const webRouter  = require("./config/webRoutes");
-const usersRouter  = require("./config/usersRoutes");
+const apiRouter  = require("./config/apiRoutes");
 
 mongoose.connect(config.db);
 
@@ -36,6 +36,6 @@ function jwtErrorHandler (err, req, res, next) {
 }
 
 app.use("/", webRouter);
-app.use("/api", usersRouter);
+app.use("/api", apiRouter);
 
 app.listen(config.port, () => console.log(`Express started on port: ${config.port}`));
