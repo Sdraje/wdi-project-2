@@ -13,7 +13,7 @@ function eventsIndexByType(req, res){
 }
 
 function eventsIndex(req, res){
-  Event.find({town: req.params.town}).sort({date: 1}).exec((err, events) => {
+  Event.find({town: req.params.town}).sort({name: 1}).exec((err, events) => {
     if (err) return res.status(500).json({ message: "Error." });
     return res.status(200).json({ events });
   });
