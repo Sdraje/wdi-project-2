@@ -17,7 +17,10 @@ router.route('/users/:id')
   .put(users.update)
   .delete(users.delete);
 
-  router.route("/events")
+  router.route("/events/:town")
   .get(events.index);
+
+  router.route("/events/:town/:eventType")
+  .get(events.indexByType);
 
 module.exports = router;

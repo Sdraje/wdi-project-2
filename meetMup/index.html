@@ -12,42 +12,60 @@
 <body>
   <header>
     <nav class="mobile">
-      <button class="btn btn-primary btn-lg register loggedOut" data-toggle="modal" data-target="#myModalHorizontal">Register</button>
-      <button class="btn btn-primary btn-lg login loggedOut" data-toggle="modal" data-target="#myModalHorizontal">Login</button>
-      <button class="btn btn-primary btn-lg logout loggedIn">Logout</button>
-      <!-- <ul>
-      <li class="register loggedOut">Register</li>
-      <li class="login loggedOut">Login</li>
-      <li class="logout loggedIn">Logout</li>
-    </ul> -->
-    <button id='burger'>Toggle</button>
-    <div class='burger-content'>
-    </div>
-  </nav>
-</header>
-<main>
+      <section><img id='logo' src='./images/logo.png'></section>
+      <div class="hiddenStart authButtons">
+        <button class="btn btn-primary btn-lg register loggedOut" data-toggle="modal" data-target="#myModalHorizontal">Register</button>
+        <button class="btn btn-primary btn-lg login loggedOut" data-toggle="modal" data-target="#myModalHorizontal">Login</button>
+        <button class="btn btn-primary btn-lg logout loggedIn">Logout</button>
+      </div>
 
-  <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
-  aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <button type="button" class="close"
-        data-dismiss="modal">
-        <span aria-hidden="true">&times;</span>
-        <span class="sr-only">Close</span>
-      </button>
-      <h4 class="modal-title" id="myModalLabel">
-        Modal title
-      </h4>
-    </div>
+      <div class="hiddenStart eventType">
+        <select class="form-control">
+          <option value="" disabled selected>Select your option...</option>
+          <option value="ALL">All the events around London!</option>
+          <option value="FEST">Festivals!</option>
+          <option value="LIVE">Live music!</option>
+          <option value="CLUB">Clubbing/Dance music!</option>
+          <option value="DATE">Dating events!</option>
+          <option value="THEATRE">Theatre/Dance!</option>
+          <option value="COMEDY">Comedy!</option>
+          <option value="EXHIB">Exhibitions and Attractions!</option>
+          <option value="KIDS">Kids/Family events!</option>
+          <option value="BARPUB">Bar/Pub events!</option>
+          <option value="LGB">Gay/Lesbian event!</option>
+          <option value="SPORT">Sporting events!</option>
+          <option value="ARTS">The Arts!</option>
+        </select>
+      </div>
 
-    <!-- Modal Body -->
-    <div class="modal-body">
+      <button id='burger'>Toggle</button>
+      <div class='burger-content'>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+    <div class="modal fade" id="myModalHorizontal" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close"
+          data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          Modal title
+        </h4>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+      </div>
     </div>
   </div>
-</div>
 </div>
 
 <div id="map-canvas"></div>
