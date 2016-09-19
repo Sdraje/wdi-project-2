@@ -133,10 +133,6 @@ App.addInfoWindowForEvent = function(event, marker){
     App.loopThroughEvents = function (data){
       $.each(data.events, (index, event) => {
         window.setTimeout(()=>{
-          // if (App.currentSearch === event.eventType) {
-          //   App.clearMap();
-          //   return false;
-          // }
           App.createMarkerForEvent(event);
         }, index*50);
       });
@@ -406,10 +402,10 @@ App.addInfoWindowForEvent = function(event, marker){
               iwOuter.parent().parent().css({left: '115px'});
 
               // Moves the shadow of the arrow 76px to the left margin.
-              iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+              iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;';});
 
               // Moves the arrow 76px to the left margin.
-              iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
+              iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 76px !important;';});
 
               // Changes the desired tail shadow color.
               iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(0, 0, 0, 0.7) 0px 1px 6px', 'z-index' : '1'});
