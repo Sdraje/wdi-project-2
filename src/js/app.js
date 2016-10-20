@@ -151,9 +151,9 @@ App.addInfoWindowForEvent = function(event, marker){
 
     App.urlSelector = function(){
       if (App.currentSearch === "ALL") {
-        return `http://localhost:3000/api/events/London/`;
+        return `https://eventi-map.herokuapp.com/api/events/London/`;
       } else {
-        return `http://localhost:3000/api/events/London/${App.currentSearch}`;
+        return `https://eventi-map.herokuapp.com/api/events/London/${App.currentSearch}`;
       }
     };
 
@@ -213,7 +213,7 @@ App.addInfoWindowForEvent = function(event, marker){
       $('#burger').click(toggleBurger);
       $('.index').click(toggleBurger);
       $('.new').click(toggleBurger);
-      App.apiUrl = "http://localhost:3000/api";
+      App.apiUrl = "https://eventi-map.herokuapp.com/api";
       App.$modal  = $(".modal-body");
 
       $(".register").on("click", App.register.bind(App));
